@@ -16,14 +16,22 @@ transfer RGB colorful image into gray image. Very easy.
 ## Project 2
 > 2D stencil operation. 
 
-Blur an image.
+Blur an image. Relatively easy.
 
 ## Project 3
 > Histogram, Reduce, Scan
 
-Tone mapping of image. 
+Tone mapping of image. Relatively difficult. 
+
+Reduce with multiple blocks is not quite easy. 
+
+This project only use scan with 1 block due to small number of elements to scan. However, the scan code I studied from Nvidia website (http://http.developer.nvidia.com/GPUGems3/gpugems3_ch39.html) has bug and does not work correctly. How could you do this ```temp[pout*n+thid] += temp[pin*n+thid - offset]; ```? It should be ```temp[pout*n+thid] = temp[pout*n+thid] + temp[pin*n+thid - offset]; ```.
+
+My Reduce, Scan, Histogram can deal with arbitrary number of input (Scan can only have 1 block in this project, see the next project for scan with large number of input).
 
 ## Project 4
 > Histogram, Compact, large Scan, Radix sort
 
-Red eye removal.
+Red eye removal. Difficult. Sorting with CUDA is not as simple as sorting with CPU in seriel. 
+
+Scan code has been modified to allow arbitrary number of input. 
