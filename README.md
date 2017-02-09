@@ -10,16 +10,20 @@
 
 ## Project 1
 > Map
+
 transfer RGB colorful image into gray image. Very easy. 
 
 ## Project 2
 > 2D stencil operation. 
+
 Blur an image.
 
 ## Project 3
 > Histogram, Reduce, Scan
+
 Tone mapping of image. 
 
 ## Project 4
 > Histogram, Compact, large Scan, Radix sort
+
 Red eye removal.
