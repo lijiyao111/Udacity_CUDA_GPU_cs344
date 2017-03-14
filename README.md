@@ -25,7 +25,7 @@ Tone mapping of image. Relatively difficult.
 
 Reduce with multiple blocks is not quite easy. 
 
-This project only use scan with 1 block due to small number of elements to scan. However, the scan code I studied from Nvidia website (http://http.developer.nvidia.com/GPUGems3/gpugems3_ch39.html) has bug and does not work correctly. How could you do this ```temp[pout*n+thid] += temp[pin*n+thid - offset]; ```? It should be ```temp[pout*n+thid] = temp[pout*n+thid] + temp[pin*n+thid - offset]; ```.
+This project only use scan with 1 block due to small number of elements to scan. However, the scan code I studied from Nvidia website (http://http.developer.nvidia.com/GPUGems3/gpugems3_ch39.html) has bug and does not work correctly. How could you do this ```temp[pout*n+thid] += temp[pin*n+thid - offset]; ```? It should be ```temp[pout*n+thid] = temp[pin*n+thid] + temp[pin*n+thid - offset]; ```.
 
 My Reduce, Scan, Histogram can deal with arbitrary number of input (Scan can only have 1 block in this project, see the next project for scan with large number of input).
 
